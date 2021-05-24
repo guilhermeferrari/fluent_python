@@ -1,7 +1,8 @@
+import collections
 import pytest
 
 
-class StrDictKey(dict):
+class StrDictKey(collections.UserDict):
     def __missing__(self, key):
         if isinstance(key, str):
             raise KeyError
@@ -19,7 +20,10 @@ class StrDictKey(dict):
 
 
 def test_access_dict_with_str_or_int():
-    str_dict = StrDictKey([("2", "two"), ("4", "four")])
+    str_dict = StrDictKey({
+        "2": "two",
+        "4": "four"
+    })
     assert str_dict[2] == str_dict["2"]
     assert str_dict[4] == str_dict["4"]
 
