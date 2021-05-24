@@ -30,3 +30,6 @@ def test_access_dict_with_str_or_int():
     with pytest.raises(KeyError):
         _ = str_dict[1]
 
+    assert str_dict.get(2) == str_dict[2]
+    assert str_dict.get(1) is None
+
