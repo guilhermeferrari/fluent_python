@@ -22,3 +22,9 @@ def test_words_position():
         "words": [5],
     }
 
+
+def test_default_dict_get():
+    dd = collections.defaultdict(list)
+    assert dd.get("random_key") is None
+    assert dd["random_key"] == []
+
