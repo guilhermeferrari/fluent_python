@@ -2,7 +2,8 @@ import collections
 import pytest
 
 
-class StrDictKey(collections.UserDict):
+# Example 3-7
+class StrDictKey(dict):
     def __missing__(self, key):
         if isinstance(key, str):
             raise KeyError
