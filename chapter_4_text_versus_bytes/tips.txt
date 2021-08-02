@@ -3,3 +3,16 @@ depend on encoding defaults. Always pass an explicit encoding= argument when ope
 because the default may change from one machine to the next, or from one day to the next.
 
 Ramalho, Luciano. Fluent Python (p. 117). O'Reilly Media. Kindle Edition.
+
+================================================================================
+
+Do not open text files in binary mode unless you need to analyze the file contents to determine the encoding even then,
+you should be using Chardet instead of reinventing the wheel (see “How to Discover the Encoding of a Byte Sequence” ).
+Ordinary code should only use binary mode to open binary files, like raster images.
+
+Ramalho, Luciano. Fluent Python (p. 118). O'Reilly Media. Kindle Edition.
+
+Sobre esse ponto, não deu detalhes do motivo. Já tive que usar para escrever uma sequencia de bytes representando um pdf, por exemplo.
+Para escrever imagino que seja ok, então?
+
+================================================================================
