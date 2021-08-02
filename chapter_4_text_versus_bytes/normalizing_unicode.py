@@ -21,6 +21,8 @@ def test_basic_normalization():
 
 
 # Ramalho, Luciano. Fluent Python (p. 123). O'Reilly Media. Kindle Edition.
+# O livro cita o NFKC como uma boa opção para indexação ou busca.
+# Mas deve ser usado com cuidado, mais detalhes no livro
 def test_special_chars():
     half = "½"
     half_normalized = normalize("NFKC", half)
