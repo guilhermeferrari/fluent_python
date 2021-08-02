@@ -20,6 +20,7 @@ def test_basic_normalization():
     assert len(s2_normalized_nfd) == 5
 
 
+# Ramalho, Luciano. Fluent Python (p. 123). O'Reilly Media. Kindle Edition.
 def test_special_chars():
     half = "½"
     half_normalized = normalize("NFKC", half)
