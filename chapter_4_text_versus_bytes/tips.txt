@@ -1,0 +1,5 @@
+Code that has to run on multiple machines or on multiple occasions should never
+depend on encoding defaults. Always pass an explicit encoding= argument when opening text files,
+because the default may change from one machine to the next, or from one day to the next.
+
+Ramalho, Luciano. Fluent Python (p. 117). O'Reilly Media. Kindle Edition.
